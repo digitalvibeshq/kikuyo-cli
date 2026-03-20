@@ -21,6 +21,23 @@ kikuyo --help
 kikuyo-cli --help
 ```
 
+## Agent Installation
+
+For Claude Desktop, add `digitalvibeshq/kikuyo-cli` as a marketplace plugin, then install the `kikuyo` plugin from that marketplace.
+
+For Claude Code, the equivalent commands are:
+
+```bash
+claude plugins marketplace add digitalvibeshq/kikuyo-cli
+claude plugins install kikuyo@digitalvibeshq-kikuyo-cli --scope user
+```
+
+For `npx skills`, run:
+
+```bash
+npx skills add digitalvibeshq/kikuyo-cli
+```
+
 ## Authentication
 
 Pass the API key per command:
