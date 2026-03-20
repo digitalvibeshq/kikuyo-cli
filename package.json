@@ -30,7 +30,8 @@
     "test": "bun test",
     "lint": "biome check .",
     "format": "biome format --write .",
-    "precommit": "bun run typecheck && bun run lint && bun run test"
+    "precommit": "bun run typecheck && bun run lint && bun run test",
+    "prepublishOnly": "bun run build"
   },
   "keywords": [
     "kikuyo",
