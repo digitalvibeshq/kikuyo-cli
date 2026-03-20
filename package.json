@@ -7,11 +7,11 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dvcrn/kikuyo-cli.git"
+    "url": "git+https://github.com/digitalvibeshq/kikuyo-cli.git"
   },
-  "homepage": "https://github.com/dvcrn/kikuyo-cli#readme",
+  "homepage": "https://github.com/digitalvibeshq/kikuyo-cli#readme",
   "bugs": {
-    "url": "https://github.com/dvcrn/kikuyo-cli/issues"
+    "url": "https://github.com/digitalvibeshq/kikuyo-cli/issues"
   },
   "bin": {
     "kikuyo": "dist/cli.js",
