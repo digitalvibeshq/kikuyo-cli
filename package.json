@@ -1,0 +1,56 @@
+{
+  "name": "kikuyo-cli",
+  "version": "0.1.0",
+  "description": "CLI for the Kikuyo REST API",
+  "author": "David Mohl <git@d.sh>",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvcrn/kikuyo-cli.git"
+  },
+  "homepage": "https://github.com/dvcrn/kikuyo-cli#readme",
+  "bugs": {
+    "url": "https://github.com/dvcrn/kikuyo-cli/issues"
+  },
+  "bin": {
+    "kikuyo": "dist/cli.js",
+    "kikuyo-cli": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "precommit": "bun run typecheck && bun run lint && bun run test"
+  },
+  "keywords": [
+    "kikuyo",
+    "cli",
+    "feedback",
+    "roadmap",
+    "api"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.8",
+    "@types/bun": "latest",
+    "@types/node": "^25.5.0",
+    "@types/yargs": "^17.0.35",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "yargs": "^18.0.0"
+  }
+}

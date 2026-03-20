@@ -1,0 +1,9 @@
+{
+  "name": "kikuyo",
+  "description": "Operate the Kikuyo CLI for organizations, projects, and feedback via the Kikuyo REST API",
+  "version": "0.1.0",
+  "author": {
+    "name": "David Mohl",
+    "email": "git@d.sh"
+  }
+}

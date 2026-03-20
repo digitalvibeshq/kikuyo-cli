@@ -1,0 +1,27 @@
+[tools]
+bun = "latest"
+node = "20"
+
+[tasks.build]
+run = "bun run build"
+description = "Build the CLI bundle"
+
+[tasks.typecheck]
+run = "bun run typecheck"
+description = "Run TypeScript checks"
+
+[tasks.test]
+run = "bun run test"
+description = "Run the test suite"
+
+[tasks.lint]
+run = "bun run lint"
+description = "Run Biome checks"
+
+[tasks.format]
+run = "bun run format"
+description = "Format the codebase"
+
+[tasks.precommit]
+run = "bun run precommit"
+description = "Run all local quality checks"

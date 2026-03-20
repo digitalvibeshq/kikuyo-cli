@@ -1,0 +1,18 @@
+{
+  "name": "dvcrn/kikuyo-cli",
+  "owner": {
+    "name": "David Mohl",
+    "email": "git@d.sh"
+  },
+  "metadata": {
+    "description": "Claude plugin marketplace entries for the Kikuyo CLI",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "kikuyo",
+      "description": "Operate the Kikuyo CLI for organizations, projects, and feedback via the Kikuyo REST API",
+      "source": "./plugins/kikuyo"
+    }
+  ]
+}
