@@ -1,18 +1,32 @@
 {
-  "name": "dvcrn/kikuyo-cli",
+  "name": "digitalvibeshq-kikuyo-cli",
   "owner": {
-    "name": "David Mohl",
-    "email": "git@d.sh"
+    "name": "digitalvibeshq"
   },
   "metadata": {
-    "description": "Claude plugin marketplace entries for the Kikuyo CLI",
-    "version": "1.0.0"
+    "description": "Claude plugin for the Kikuyo CLI — manage organizations, projects, and feedback via the Kikuyo REST API.",
+    "version": "0.1.0",
+    "pluginRoot": "./.claude-plugin/plugins"
   },
   "plugins": [
     {
       "name": "kikuyo",
-      "description": "Operate the Kikuyo CLI for organizations, projects, and feedback via the Kikuyo REST API",
-      "source": "./plugins/kikuyo"
+      "description": "Operate the Kikuyo CLI for organizations, projects, and feedback via the Kikuyo REST API.",
+      "version": "0.1.0",
+      "author": {
+        "name": "dvcrn",
+        "url": "https://github.com/dvcrn"
+      },
+      "homepage": "https://github.com/digitalvibeshq/kikuyo-cli",
+      "repository": "https://github.com/digitalvibeshq/kikuyo-cli",
+      "license": "MIT",
+      "keywords": [
+        "kikuyo",
+        "feedback",
+        "roadmap",
+        "claude-plugin"
+      ],
+      "source": "./.claude-plugin/plugins/kikuyo"
     }
   ]
 }

@@ -1,0 +1,18 @@
+{
+  "name": "kikuyo",
+  "description": "Operate the Kikuyo CLI for organizations, projects, and feedback via the Kikuyo REST API.",
+  "version": "0.1.0",
+  "author": {
+    "name": "dvcrn",
+    "url": "https://github.com/dvcrn"
+  },
+  "homepage": "https://github.com/digitalvibeshq/kikuyo-cli",
+  "repository": "https://github.com/digitalvibeshq/kikuyo-cli",
+  "license": "MIT",
+  "keywords": [
+    "kikuyo",
+    "feedback",
+    "roadmap",
+    "agent-skill"
+  ]
+}
