@@ -3,8 +3,8 @@ name: Linear Release
 on:
   push:
     tags:
-      - "v[0-9]*.[0-9]*.[0-9]*"
-      - "[0-9]*.[0-9]*.[0-9]*"
+      - "v[0-9]+.[0-9]+.[0-9]+"
+      - "[0-9]+.[0-9]+.[0-9]+"
 
 permissions:
   contents: read
@@ -25,11 +25,11 @@ jobs:
       - name: Resolve tag metadata
         id: meta
         run: |
-          tag="${{ github.ref_name }}"
+          tag="$GITHUB_REF_NAME"
           ver="${tag#v}"
-          prev_tag="$(git tag --merged HEAD --sort=-creatordate | grep -E '^v?[0-9]+\.[0-9]+\.[0-9]+' | grep -vxF "$tag" | head -n 1 || true)"
+          prev_tag="$(git tag --merged HEAD --no-contains HEAD --sort=-v:refname | grep -E '^v?[0-9]+\.[0-9]+\.[0-9]+$' | head -n 1 || true)"
           echo "version=cli/$ver" >> "$GITHUB_OUTPUT"
-          echo "base_ref=$prev_tag" >> "$GITHUB_OUTPUT"
+          echo "base_ref=${prev_tag:-$(git rev-list --max-parents=0 HEAD | tail -n 1)}" >> "$GITHUB_OUTPUT"
 
       - name: Sync Linear release
         uses: linear/linear-release-action@dd4fc407f860b9460d2cf0b3fb1edd8985cf443f # v0.18.2
@@ -38,3 +38,4 @@ jobs:
           name: ${{ steps.meta.outputs.version }}
           version: ${{ steps.meta.outputs.version }}
           base_ref: ${{ steps.meta.outputs.base_ref }}
+          no_branch_ref_detection: true
